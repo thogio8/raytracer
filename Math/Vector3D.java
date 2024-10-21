@@ -86,4 +86,9 @@ public class Vector3D {
     public double dot(Vector3D other) {
         return this.x * other.x + this.y * other.y + this.z * other.z;
     }
+
+    @Override
+    public String toString() {
+        return "Vector3D(" + x + ", " + y + ", " + z + ")";
+    }
 }
