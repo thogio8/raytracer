@@ -34,15 +34,4 @@ public class Point3D{
         double[][] data = matrix.getData();
         return new Point3D(data[0][0], data[1][0], data[2][0]);
     }
-
-    //Main method for testing all the methods
-    public static void main(String[] args){
-        Point3D p1 = new Point3D(1, 2, 3);
-        Point3D p2 = new Point3D(4, 5, 6);
-        Vector3D v = new Vector3D(1, 1, 1);
-        System.out.println(p1.distance(p2));
-        System.out.println(p1.add(v));
-        System.out.println(p1.toMatrix());
-        System.out.println(Point3D.fromMatrix(p1.toMatrix()));
-    }
 }
