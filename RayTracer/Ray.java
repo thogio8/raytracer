@@ -2,6 +2,7 @@ package RayTracer;
 
 import Math.Point3D;
 import Math.Vector3D;
+import Math.Matrix;
 
 class Ray{
     private Point3D origin;
