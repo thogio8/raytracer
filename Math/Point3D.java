@@ -26,6 +26,14 @@ public class Point3D{
         return new Point3D(x + v.x, y + v.y, z + v.z);
     }
 
+    public Point3D subtract(Vector3D v){
+        return new Point3D(x - v.x, y - v.y, z - v.z);
+    }
+
+    public Vector3D subtract(Point3D p) {
+        return new Vector3D(x - p.x, y - p.y, z - p.z);
+    }
+
     public Matrix toMatrix() {
         return new Matrix(new double[][]{{x}, {y}, {z}, {1}});
     }
