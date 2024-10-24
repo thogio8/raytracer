@@ -1,4 +1,5 @@
-import Math.*;
+package Math;
+
 import RayTracer.*;
 
 public class Rectangle3D {
