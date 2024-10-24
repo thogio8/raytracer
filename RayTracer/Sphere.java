@@ -4,7 +4,7 @@ import Math.Point3D;
 import Math.Vector3D;
 import Math.Matrix;
 
-class Sphere {
+public class Sphere {
     private Point3D center;
     private double radius;
 

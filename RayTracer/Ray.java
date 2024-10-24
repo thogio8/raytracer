@@ -4,7 +4,7 @@ import Math.Point3D;
 import Math.Vector3D;
 import Math.Matrix;
 
-class Ray{
+public class Ray{
     private Point3D origin;
     private Vector3D direction;
 
