@@ -29,12 +29,12 @@ public class Vector3D {
         return new Vector3D(this.x - other.x, this.y - other.y, this.z - other.z);
     }
 
-    public Vector3D multiply(Vector3D other) {
-        return new Vector3D(this.x * other.x, this.y * other.y, this.z * other.z);
+    public Vector3D multiply(double value) {
+        return new Vector3D(this.x * value, this.y * value, this.z * value);
     }
 
-    public Vector3D divide(Vector3D other) {
-        return new Vector3D(this.x / other.x, this.y / other.y, this.z / other.z);
+    public Vector3D divide(double value) { //Review this
+        return new Vector3D(this.x / value, this.y / value, this.z / value);
     }
 
     public Vector3D addAssign(Vector3D other) {
@@ -49,28 +49,6 @@ public class Vector3D {
         this.y -= other.y;
         this.z -= other.z;
         return this;
-    }
-
-    public Vector3D multiplyAssign(Vector3D other) {
-        this.x *= other.x;
-        this.y *= other.y;
-        this.z *= other.z;
-        return this;
-    }
-
-    public Vector3D divideAssign(Vector3D other) {
-        this.x /= other.x;
-        this.y /= other.y;
-        this.z /= other.z;
-        return this;
-    }
-
-    public Vector3D multiply(double value) {
-        return new Vector3D(this.x * value, this.y * value, this.z * value);
-    }
-
-    public Vector3D divide(double value) {
-        return new Vector3D(this.x / value, this.y / value, this.z / value);
     }
 
     public Vector3D multiplyAssign(double value) {
