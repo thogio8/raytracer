@@ -94,4 +94,12 @@ public class Vector3D {
     public double getZ() {
         return z;
     }
+
+    public Vector3D normalize() {
+        double length = this.length();
+        if (length == 0) {
+            throw new ArithmeticException("Cannot normalize a zero-length vector");
+        }
+        return this.divide(length);
+    }
 }
