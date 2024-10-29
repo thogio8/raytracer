@@ -1,6 +1,8 @@
 import javax.swing.*;
 import RayTracer.*;
 import Math.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,13 +14,15 @@ public class Main {
 
         Camera cam = new Camera(origin, screen);
 
-        Sphere sphere = new Sphere(new Point3D(0, 0, -5), 1);
+        List<Hittable> objects = new ArrayList<>();
+        objects.add(new Sphere(new Point3D(0, 0, -5), 1));
+        objects.add(new Plane(new Point3D(0, -1, -5), new Vector3D(0, 1, 0)));
 
         int width = 900;
         int height = 900;
 
         JFrame frame = new JFrame("Ray Tracer");
-        RayTracerPanel panel = new RayTracerPanel(cam, sphere, width, height);
+        RayTracerPanel panel = new RayTracerPanel(cam, objects, width, height);
         frame.add(panel);
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
