@@ -42,4 +42,16 @@ public class Point3D{
         double[][] data = matrix.getData();
         return new Point3D(data[0][0], data[1][0], data[2][0]);
     }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double getZ() {
+        return z;
+    }
 }
