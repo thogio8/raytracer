@@ -4,7 +4,7 @@ import Math.Point3D;
 import Math.Vector3D;
 import Math.Matrix;
 
-public class Sphere {
+public class Sphere implements Hittable {
     private Point3D center;
     private double radius;
 
@@ -21,6 +21,7 @@ public class Sphere {
         return radius;
     }
 
+    @Override
     public double hit(Ray ray) {
         Vector3D oc = ray.getOrigin().subtract(center);
         double a = ray.getDirection().dot(ray.getDirection());
