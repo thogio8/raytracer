@@ -1,3 +1,4 @@
+import javax.swing.*;
 import RayTracer.*;
 import Math.*;
 
@@ -11,22 +12,16 @@ public class Main {
 
         Camera cam = new Camera(origin, screen);
 
-        Sphere sphere = new Sphere(new Point3D(0, 0, -3), 1);
+        Sphere sphere = new Sphere(new Point3D(0, 0, -5), 1);
 
-        int width = 10;
-        int height = 10;
-        for (int j = 0; j < height; j++) {
-            for (int i = 0; i < width; i++) {
-                double u = (double) i / (width - 1);
-                double v = (double) j / (height - 1);
-                Ray ray = cam.getRay(u, v);
-                double t = sphere.hit(ray);
-                if (t > 0.0) {
-                    System.out.println("Hit at t = " + t + " for ray (" + u + ", " + v + ")");
-                } else {
-                    System.out.println("No hit for ray (" + u + ", " + v + ")");
-                }
-            }
-        }
+        int width = 900;
+        int height = 900;
+
+        JFrame frame = new JFrame("Ray Tracer");
+        RayTracerPanel panel = new RayTracerPanel(cam, sphere, width, height);
+        frame.add(panel);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }
